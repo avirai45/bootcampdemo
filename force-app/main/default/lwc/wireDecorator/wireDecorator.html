@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Wire Demo" icon-name="custom:custom6">
+        <div style="padding: 1rem">
+            <div class="slds-m-around_x-small">
+                <p style="color: #147bd4" onmouseover={showPop}>Account Name (Using Wire Property)</p>
+                <template if:true={popDisplay}>
+                    <section aria-describedby="dialog-body-id-111" aria-labelledby="dialog-heading-id-116" class="slds-popover slds-nubbin_left slds-popover_small" role="dialog" onmouseup={closePop}>                        
+                        <div class="slds-popover__body" id="dialog-body-id-111">
+                            <div class="slds-media">
+                                <div class="slds-media__body">
+                                    <header class="slds-popover__header">
+                                        <h2 class="slds-text-heading_small" id="dialog-heading-id-116">Header title</h2>
+                                    </header>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </template>
+                <template if:true={acc.data}>
+                    <lightning-formatted-text value={acc.data.Name}></lightning-formatted-text>
+                </template>
+            </div>
+ 
+            <div class="slds-m-around_x-small">
+                <p style="color: #147bd4">Contact Name (Using Wire Function)</p>
+                <lightning-formatted-text value={contactName}></lightning-formatted-text>
+            </div>
+
+            <div class="slds-m-around_x-small">
+                <p style="color: #147bd4">Opportunity Name (Using Wire Adapator)</p>
+                <lightning-formatted-text value={oppName}></lightning-formatted-text>
+            </div>
+        </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Track Demo" icon-name="custom:custom4">
+        <div style="padding:1rem;">
+            <div class="slds-m-around_x-small">
+                <p style="color:#147bd4;">String With Track</p>
+                <lightning-formatted-text value={nameWithTrack} class="slds-m-right_medium"></lightning-formatted-text>
+                <lightning-button label="Change Value" onclick={handleChange2}></lightning-button>
+            </div>
+
+            <div class="slds-m-around_x-small">
+                <p style="color:#147bd4;">String Without Track</p>
+                <lightning-formatted-text value={nameWithoutTrack} class="slds-m-right_medium"></lightning-formatted-text>
+                <lightning-button label="Change Value" onclick={handleChange1}></lightning-button>
+            </div>
+
+            <div class="slds-m-around_x-small">
+                <p style="color:#147bd4;">Object With Track</p>
+                <lightning-formatted-number value={personWithTrack.marks} class="slds-m-right_medium"></lightning-formatted-number>
+                <lightning-button label="Change Value" onclick={handleChange4}></lightning-button>
+            </div>
+
+            <div class="slds-m-around_x-small">
+                <p style="color:#147bd4;">Object Without Track</p>
+                <lightning-formatted-number value={personWithoutTrack.marks} class="slds-m-right_medium"></lightning-formatted-number>
+                <lightning-button label="Change Value" onclick={handleChange3}></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>
